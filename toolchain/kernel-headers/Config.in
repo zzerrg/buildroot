@@ -38,12 +38,12 @@ choice
 
 	config BR2_KERNEL_HEADERS_3_2
 		bool "Linux 3.2.x kernel headers"
-
+    
 	config BR2_KERNEL_HEADERS_VERSION
 		bool "Linux 2.6 (manually specified version)"
 
 	config BR2_KERNEL_HEADERS_SNAP
-		bool "Local Linux snapshot (linux-2.6.tar.bz2)"
+		bool "Local Linux snapshot (linux-3.3.tar.bz2)"
 endchoice
 
 config BR2_DEFAULT_KERNEL_VERSION
@@ -63,5 +63,5 @@ config BR2_DEFAULT_KERNEL_HEADERS
 	default "3.0.22"	if BR2_KERNEL_HEADERS_3_0
 	default "3.1.10"	if BR2_KERNEL_HEADERS_3_1
 	default "3.2.7"		if BR2_KERNEL_HEADERS_3_2
-	default "2.6"		if BR2_KERNEL_HEADERS_SNAP
+	default "3.3"		if BR2_KERNEL_HEADERS_SNAP
 	default $BR2_DEFAULT_KERNEL_VERSION if BR2_KERNEL_HEADERS_VERSION
